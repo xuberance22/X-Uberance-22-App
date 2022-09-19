@@ -8,19 +8,6 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/cupertino.dart';
 import 'events.dart';
 
-// void main() => runApp(MaterialApp(home: Eventss()));
-
-// //       name: name,
-// //       about: about,
-// //       category: category,
-// //       location: location,
-// //       day: day,
-// //       time: time,
-// //       participants: participants,
-// //       phrase: phrase,
-// //       rules: rules,
-// //       link: link);
-// // }
 
 class Eventss extends StatefulWidget {
   String name;
