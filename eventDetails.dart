@@ -8,20 +8,6 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/cupertino.dart';
 import 'events.dart';
 
-// void main() => runApp(MaterialApp(home: Eventss()));
-
-// //       name: name,
-// //       about: about,
-// //       category: category,
-// //       location: location,
-// //       day: day,
-// //       time: time,
-// //       participants: participants,
-// //       phrase: phrase,
-// //       rules: rules,
-// //       link: link);
-// // }
-
 class Eventss extends StatefulWidget {
   String name;
   String about;
@@ -95,11 +81,7 @@ class _EventssState extends State<Eventss> {
   final ScrollController _scroll1 = ScrollController();
   final ScrollController _scroll2 = ScrollController();
   final String tag = "events";
-  // final String rules =
-  //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur semper, massa et dignissim laoreet, ex nisi semper magna, vitae cursus nisl arcu porttitor mi. Maecenas congue ac sem in consectetur. Proin eget quam mi. Maecenas ac libero mi. Vivamus vel risus ac mi vehicula auctor ac et risus. Nullam bibendum, sapien at placerat dapibus, ante diam luctus felis, ac ultrices orci dolor ac elit. Praesent malesuada arcu eu mauris porttitor, id euismod neque luctus. Sed non massa magna. Nam at tempor nisl. Aliquam molestie, nibh eget tincidunt pulvinar, sem nunc molestie eros, ut feugiat nisi dolor fermentum elit. Phasellus id nunc vel lorem dapibus feugiat sed in metus. In diam metus, cursus placerat maximus quis, maximus quis ligula. Morbi porttitor varius neque nec laoreet. Sed a est accumsan, bibendum massa ac, aliquet ligula. Proin posuere dignissim enim, in aliquam arcu cursus ut Proin placerat tortor eget ultrices iaculis. Phasellus non magna nec felis molestie facilisis. Nam a lorem sed diam porta ornare id sit amet elit. Mauris et massa convallis, maximus nisl eget, venenatis nulla. Ut imperdiet dictum posuere. Nunc scelerisque bibendum libero, quis maximus urna vulputate sed. Suspendisse eget elit nibh. In in mattis nibh. Etiam eleifend ante non ultricies viverra. Nulla magna enim, sagittis at orci vehicula, euismod posuere justo. Maecenas luctus dui blandit magna eleifend tempus. Nam vitae dolor diam. Mauris fermentum mi at sagittis hendrerit. Fusce imperdiet aliquam hendrerit. Proin gravida varius purus ut gravida. Sed nulla ligula, fermentum non pellentesque sed, efficitur sit amet nisl. Nunc lacinia metus et sollicitudin faucibus. Etiam imperdiet augue a rutrum luctus. Cras ut leo nulla. Ut ex tortor, facilisis vel urna sit amet, suscipit fermentum magna. Donec sit amet sem lobortis, posuere arcu in, hendrerit velit. Nulla in massa vel tortor finibus congue vel vitae diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed fermentum a dolor eget dictum. Vivamus a faucibus arcu. Proin imperdiet varius eros, euismod consequat tortor varius id. In rhoncus nec sapien nec imperdiet. Sed viverra odio libero, vel tincidunt tellus tempor vel. Suspendisse mi sapien, cursus pretium arcu tempus, iaculis mattis nisl. Donec blandit laoreet velit sed tristique. Aliquam ultricies enim nibh, ut vehicula justo ultrices nec. Praesent vulputate neque purus, quis volutpat lorem feugiat non. Ut fringilla elit eget enim rhoncus, in tincidunt magna posuere.";
-  // final String guidelines =
-  //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur semper, massa et dignissim laoreet, ex nisi semper magna, vitae cursus nisl arcu porttitor mi. Maecenas congue ac sem in consectetur. Proin eget quam mi. Maecenas ac libero mi. Vivamus vel risus ac mi vehicula auctor ac et risus. Nullam bibendum, sapien at placerat dapibus, ante diam luctus felis, ac ultrices orci dolor ac elit. Praesent malesuada arcu eu mauris porttitor, id euismod neque luctus. Sed non massa magna. Nam at tempor nisl. Aliquam molestie, nibh eget tincidunt pulvinar, sem nunc molestie eros, ut feugiat nisi dolor fermentum elit. Phasellus id nunc vel lorem dapibus feugiat sed in metus. In diam metus, cursus placerat maximus quis, maximus quis ligula. Morbi porttitor varius neque nec laoreet. Sed a est accumsan, bibendum massa ac, aliquet ligula. Proin posuere dignissim enim, in aliquam arcu cursus ut Proin placerat tortor eget ultrices iaculis. Phasellus non magna nec felis molestie facilisis. Nam a lorem sed diam porta ornare id sit amet elit. Mauris et massa convallis, maximus nisl eget, venenatis nulla. Ut imperdiet dictum posuere. Nunc scelerisque bibendum libero, quis maximus urna vulputate sed. Suspendisse eget elit nibh. In in mattis nibh. Etiam eleifend ante non ultricies viverra. Nulla magna enim, sagittis at orci vehicula, euismod posuere justo. Maecenas luctus dui blandit magna eleifend tempus. Nam vitae dolor diam. Mauris fermentum mi at sagittis hendrerit. Fusce imperdiet aliquam hendrerit. Proin gravida varius purus ut gravida. Sed nulla ligula, fermentum non pellentesque sed, efficitur sit amet nisl. Nunc lacinia metus et sollicitudin faucibus. Etiam imperdiet augue a rutrum luctus. Cras ut leo nulla. Ut ex tortor, facilisis vel urna sit amet, suscipit fermentum magna. Donec sit amet sem lobortis, posuere arcu in, hendrerit velit. Nulla in massa vel tortor finibus congue vel vitae diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed fermentum a dolor eget dictum. Vivamus a faucibus arcu. Proin imperdiet varius eros, euismod consequat tortor varius id. In rhoncus nec sapien nec imperdiet. Sed viverra odio libero, vel tincidunt tellus tempor vel. Suspendisse mi sapien, cursus pretium arcu tempus, iaculis mattis nisl. Donec blandit laoreet velit sed tristique. Aliquam ultricies enim nibh, ut vehicula justo ultrices nec. Praesent vulputate neque purus, quis volutpat lorem feugiat non. Ut fringilla elit eget enim rhoncus, in tincidunt magna posuere.";
-
+  
   Widget _eventRules() {
     return Hero(
       tag: "$tag",
@@ -280,13 +262,8 @@ class _EventssState extends State<Eventss> {
                       height: MediaQuery.of(context).size.height * 0.32,
                       width: 450.0,
                       fit: BoxFit.contain,
-                      // width: MediaQuery.of(context).size.width * 0.35,
-                      // height: MediaQuery.of(context).size.height * 0.35,
-                      // fit: BoxFit.contain,
                     ),
                   ),
-                  // width: MediaQuery(context).width * 2 / 3,
-                  // SizedBox(height: 25.0),
                   SizedBox(height: 0.04 * MediaQuery.of(context).size.height),
                   Text(
                     '$name',
