@@ -124,7 +124,7 @@ List Day3About = [
   'Treasure Hunt',
   'Western Dance',
   'Hackathon',
-  'CLosing Ceremony'
+  'Closing Ceremony'
 ];
 List Day3Timing = [
   '08:30 AM',
