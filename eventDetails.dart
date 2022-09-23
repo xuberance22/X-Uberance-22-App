@@ -299,7 +299,7 @@ class _EventssState extends State<Eventss> {
                     color: Colors.grey[200],
                     indent: MediaQuery.of(context).size.width * 0.05,
                     endIndent: MediaQuery.of(context).size.width * 0.05,
-                    thickness: 0.5,
+                    thickness: 0.0025 * MediaQuery.of(context).size.height,
                   ),
                   Text(
                     'LOCATION: $location',
@@ -347,18 +347,18 @@ class _EventssState extends State<Eventss> {
                     color: Colors.grey[200],
                     indent: MediaQuery.of(context).size.width * 0.05,
                     endIndent: MediaQuery.of(context).size.width * 0.05,
-                    thickness: 0.5,
+                    thickness: 0.0025 * MediaQuery.of(context).size.height,
                   ),
                   Text(
                     textAlign: TextAlign.center,
                     '$phrase',
                     style: TextStyle(
-                        fontSize: 0.025 * MediaQuery.of(context).size.width,
+                        fontSize: 0.035 * MediaQuery.of(context).size.width,
                         // letterSpacing: 2.0,
                         color: Colors.grey[200],
                         fontFamily: 'batmfa__'),
                   ),
-                  SizedBox(height: MediaQuery.of(context).size.height * 0.075),
+                  SizedBox(height: MediaQuery.of(context).size.height * 0.052s),
                   Stack(
                     children: [
                       Column(
