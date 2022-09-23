@@ -138,16 +138,7 @@ class _ScheduleState extends State<Schedule> {
       appBar: AppBar(
         toolbarHeight: MediaQuery.of(context).size.height * 0.055,
         backgroundColor: Color.fromARGB(255, 3, 12, 34),
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Image.asset(
-              'lib/assets/xuberance22_logo_noText.png',
-              height: 0.035 * MediaQuery.of(context).size.height,
-            ),
-            SizedBox(
-              width: 10.0,
-            ),
+        title: 
             Text(
               'SCHEDULE',
               style: TextStyle(
@@ -156,9 +147,7 @@ class _ScheduleState extends State<Schedule> {
                 // fontWeight: FontWeight.bold,
                 fontFamily: 'batmfa__',
               ),
-            )
-          ],
-        ),
+            ),
       ),
       body: Container(
         decoration: BoxDecoration(
