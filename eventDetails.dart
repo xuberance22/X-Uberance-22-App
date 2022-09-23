@@ -218,17 +218,7 @@ class _EventssState extends State<Eventss> {
       appBar: AppBar(
         toolbarHeight: MediaQuery.of(context).size.height * 0.055,
         backgroundColor: Color.fromARGB(255, 3, 12, 34),
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Image.asset(
-              'lib/assets/xuberance22_logo_noText.png',
-              height: 0.035 * MediaQuery.of(context).size.height,
-            ),
-            SizedBox(
-              width: 0.015 * MediaQuery.of(context).size.width,
-            ),
-            Text(
+        title:Text(
               '$name',
               style: TextStyle(
                 color: Colors.grey[200],
@@ -236,9 +226,7 @@ class _EventssState extends State<Eventss> {
                 // fontWeight: FontWeight.bold,
                 fontFamily: 'batmfa__',
               ),
-            )
-          ],
-        ),
+            ),
       ),
       body: Container(
         decoration: BoxDecoration(
