@@ -6,7 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/cupertino.dart';
-import 'events.dart';
+
 
 class Eventss extends StatefulWidget {
   String name;
