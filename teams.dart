@@ -19,16 +19,7 @@ class _TeamState extends State<Team> {
       appBar: AppBar(
         toolbarHeight: MediaQuery.of(context).size.height * 0.055,
         backgroundColor: Color.fromARGB(255, 3, 12, 34),
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Image.asset(
-              'lib/assets/xuberance22_logo_noText.png',
-              height: 0.035 * MediaQuery.of(context).size.height,
-            ),
-            SizedBox(
-              width: 10.0,
-            ),
+        title: 
             Text(
               'TEAM',
               style: TextStyle(
@@ -37,9 +28,7 @@ class _TeamState extends State<Team> {
                 // fontWeight: FontWeight.bold,
                 fontFamily: 'batmfa__',
               ),
-            )
-          ],
-        ),
+            ),
       ),
       body: Container(
         decoration: const BoxDecoration(
