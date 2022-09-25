@@ -70,7 +70,7 @@ class _ScheduleState extends State<Schedule> {
             style: TextStyle(
                 color: Colors.white,
                 fontFamily: 'Xavier3',
-                fontSize: MediaQuery.of(context).size.width * 0.02),
+                fontSize: MediaQuery.of(context).size.width * 0.025),
           ),
           trailing: Text(
             '$time',
