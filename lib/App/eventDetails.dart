@@ -361,7 +361,7 @@ class _EventssState extends State<Eventss> {
                       textAlign: TextAlign.center,
                       '$phrase',
                       style: TextStyle(
-                          fontSize: 0.035 * MediaQuery.of(context).size.width,
+                          fontSize: 0.03 * MediaQuery.of(context).size.width,
                           // letterSpacing: 2.0,
                           color: Colors.grey[200],
                           fontFamily: 'Xavier1'),
