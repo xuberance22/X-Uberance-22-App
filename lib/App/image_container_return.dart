@@ -50,15 +50,15 @@ class _ImgRtrState extends State<ImgRtr> {
                   backgroundColor: Color.fromARGB(255, 3, 12, 34),
                   content: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Container(
-                        height: 0.25 * MediaQuery.of(context).size.width,
-                        width: 0.25 * MediaQuery.of(context).size.width,
+                        height: 0.5 * MediaQuery.of(context).size.width,
+                        width: 0.5 * MediaQuery.of(context).size.width,
                         decoration: BoxDecoration(
                           image: DecorationImage(
                             image: AssetImage(
-                                'lib/assets/xuberance22_logo_noText.png'),
+                                '$link'),
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -66,6 +66,7 @@ class _ImgRtrState extends State<ImgRtr> {
                       SizedBox(
                           height: 0.02 * MediaQuery.of(context).size.height),
                       Text(
+                        textAlign: TextAlign.center,
                         name,
                         style: TextStyle(
                           fontFamily: "Xavier1",
@@ -76,6 +77,7 @@ class _ImgRtrState extends State<ImgRtr> {
                       SizedBox(
                           height: 0.015 * MediaQuery.of(context).size.height),
                       Text(
+                        textAlign: TextAlign.center,
                         designation,
                         style: TextStyle(
                           fontFamily: "Xavier1",
