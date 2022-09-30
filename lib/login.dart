@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:xuberance22/registration.dart';
+import 'package:xuberance22_app/registration.dart';
 import '../App/eventOnStage.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -22,7 +22,8 @@ class _LoginState extends State<Login> {
             stream: FirebaseAuth.instance.authStateChanges(),
             builder: (context, snapshot) {
               if (snapshot.hasData) {
-                return RegistrationList(FirebaseAuth.instance.currentUser!.uid);
+                return RegistrationList(
+                    FirebaseAuth.instance.currentUser!.email);
               } else {
                 return Container(
                   decoration: const BoxDecoration(
@@ -36,42 +37,59 @@ class _LoginState extends State<Login> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        SizedBox(height: 0.03*MediaQuery.of(context).size.height),
+                        SizedBox(
+                            height: 0.03 * MediaQuery.of(context).size.height),
                         Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.all(35.0),
-                              child: IconButton(onPressed: (){
-                                Navigator.push(context,
-                                    MaterialPageRoute(builder: (context) => EventsOnStage()));
-                              },
-                                  icon:Icon(Icons.arrow_back,
-                                    size: 30,
-                                    color: Colors.white,) ),
-                            ),
-                            Text("LOGIN", style: TextStyle(fontFamily: "Xavier2", color: Colors.white, fontSize: 0.03*MediaQuery.of(context).size.height)),
-                            Padding(
-                              padding: const EdgeInsets.all(35.0),
-                              child: IconButton(onPressed: (){
-                                launchUrl(Uri.parse("https://youtu.be/dQw4w9WgXcQ"));
-                              },
-                                  icon:Icon(Icons.arrow_back,
-                                    size: 30,
-                                    color: Colors.transparent,) ),
-                            ),
-                          ]
-                        ),
-                        SizedBox(height: 0.3 * MediaQuery.of(context).size.height),
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(35.0),
+                                child: IconButton(
+                                    onPressed: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  EventsOnStage()));
+                                    },
+                                    icon: Icon(
+                                      Icons.arrow_back,
+                                      size: 30,
+                                      color: Colors.white,
+                                    )),
+                              ),
+                              Text("LOGIN",
+                                  style: TextStyle(
+                                      fontFamily: "Xavier2",
+                                      color: Colors.white,
+                                      fontSize: 0.03 *
+                                          MediaQuery.of(context).size.height)),
+                              Padding(
+                                padding: const EdgeInsets.all(35.0),
+                                child: IconButton(
+                                    onPressed: () {
+                                      launchUrl(Uri.parse(
+                                          "https://youtu.be/dQw4w9WgXcQ"));
+                                    },
+                                    icon: Icon(
+                                      Icons.arrow_back,
+                                      size: 30,
+                                      color: Colors.transparent,
+                                    )),
+                              ),
+                            ]),
+                        SizedBox(
+                            height: 0.3 * MediaQuery.of(context).size.height),
                         SizedBox(
                             width: 0.6 * MediaQuery.of(context).size.width,
                             child: TextFormField(
                               decoration: const InputDecoration(
                                 hintText: "E-Mail",
-                                hintStyle: TextStyle(color: Colors.white, fontFamily: 'Xavier3'),
+                                hintStyle: TextStyle(
+                                    color: Colors.white, fontFamily: 'Xavier3'),
                                 enabledBorder: OutlineInputBorder(
-                                  borderSide:
-                                      BorderSide(color: Colors.white, width: 2.0),
+                                  borderSide: BorderSide(
+                                      color: Colors.white, width: 2.0),
                                 ),
                                 fillColor: Color.fromARGB(255, 3, 12, 34),
                                 filled: true,
@@ -86,18 +104,21 @@ class _LoginState extends State<Login> {
                                   email = value;
                                 });
                               },
-                              style: TextStyle(color: Colors.white, fontFamily: 'Xavier3'),
+                              style: TextStyle(
+                                  color: Colors.white, fontFamily: 'Xavier3'),
                             )),
-                        SizedBox(height: 0.05 * MediaQuery.of(context).size.height),
+                        SizedBox(
+                            height: 0.05 * MediaQuery.of(context).size.height),
                         SizedBox(
                             width: 0.6 * MediaQuery.of(context).size.width,
                             child: TextFormField(
                               decoration: const InputDecoration(
                                 hintText: "Password",
-                                hintStyle: TextStyle(color: Colors.white, fontFamily: 'Xavier3'),
+                                hintStyle: TextStyle(
+                                    color: Colors.white, fontFamily: 'Xavier3'),
                                 enabledBorder: OutlineInputBorder(
-                                  borderSide:
-                                  BorderSide(color: Colors.white, width: 2.0),
+                                  borderSide: BorderSide(
+                                      color: Colors.white, width: 2.0),
                                 ),
                                 fillColor: Color.fromARGB(255, 3, 12, 34),
                                 filled: true,
@@ -105,10 +126,10 @@ class _LoginState extends State<Login> {
                                   borderSide: BorderSide(
                                       color: Color.fromARGB(255, 3, 12, 34),
                                       width: 2.0),
-
                                 ),
                               ),
-                              style: TextStyle(color: Colors.white, fontFamily: 'Xavier3'),
+                              style: TextStyle(
+                                  color: Colors.white, fontFamily: 'Xavier3'),
                               obscureText: true,
                               onChanged: (value) {
                                 setState(() {
@@ -116,10 +137,11 @@ class _LoginState extends State<Login> {
                                 });
                               },
                             )),
-                        SizedBox(height: 0.05 * MediaQuery.of(context).size.height),
                         SizedBox(
-                          width: 0.25*MediaQuery.of(context).size.width,
-                          height: 0.05*MediaQuery.of(context).size.height,
+                            height: 0.05 * MediaQuery.of(context).size.height),
+                        SizedBox(
+                          width: 0.25 * MediaQuery.of(context).size.width,
+                          height: 0.05 * MediaQuery.of(context).size.height,
                           child: ElevatedButton(
                               onPressed: () {
                                 SignIn();
@@ -127,7 +149,11 @@ class _LoginState extends State<Login> {
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: Color.fromRGBO(3, 12, 34, 1),
                               ),
-                              child: Text("Login", style: TextStyle(color: Colors.white, fontFamily: 'Xavier1'),)),
+                              child: Text(
+                                "Login",
+                                style: TextStyle(
+                                    color: Colors.white, fontFamily: 'Xavier1'),
+                              )),
                         ),
                       ],
                     ),
@@ -138,8 +164,23 @@ class _LoginState extends State<Login> {
   }
 
   Future SignIn() async {
-    await FirebaseAuth.instance.signInWithEmailAndPassword(
-        email: email.trim(), password: password.trim());
+    try {
+      await FirebaseAuth.instance.signInWithEmailAndPassword(
+          email: email.trim(), password: password.trim());
+    } catch (e) {
+      return showDialog(
+          context: context,
+          builder: (context) => AlertDialog(
+                backgroundColor: Color.fromRGBO(3, 12, 34, 0.7),
+                content: Text('Incorrect Credentials',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        color: Colors.red,
+                        fontFamily: 'Xavier3',
+                        fontSize: 0.02 * MediaQuery.of(context).size.height)),
+              ));
+    }
+
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(builder: (BuildContext context) => this.widget),

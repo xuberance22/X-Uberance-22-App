@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:xuberance22/App/schedule.dart';
-import 'package:xuberance22/App/teams.dart';
+import 'package:xuberance22_app/App/schedule.dart';
+import 'package:xuberance22_app/App/teams.dart';
 import '../login.dart';
 import 'eventOffStage.dart';
 import 'eventOnStage.dart';
@@ -70,15 +70,15 @@ class _EventsState extends State<EventsSporting> {
         toolbarHeight: MediaQuery.of(context).size.height * 0.055,
         backgroundColor: Color.fromARGB(255, 3, 12, 34),
         title:
-            Text(
-              'Events',
-              style: TextStyle(
-                color: Colors.grey[200],
-                fontSize: 0.035 * MediaQuery.of(context).size.width,
-                // fontWeight: FontWeight.bold,
-                fontFamily: 'Xavier1',
-              ),
-            ),
+        Text(
+          'Events',
+          style: TextStyle(
+            color: Colors.grey[200],
+            fontSize: 0.035 * MediaQuery.of(context).size.width,
+            // fontWeight: FontWeight.bold,
+            fontFamily: 'Xavier1',
+          ),
+        ),
         centerTitle: true,
         actions: <Widget>[
           IconButton(
@@ -205,42 +205,43 @@ class _EventsState extends State<EventsSporting> {
                 ],
               ),
             ),
-            BottomAppBar(
-              color: Color.fromARGB(255, 3, 12, 34),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: <Widget>[
-                  IconButton(
-                    onPressed: (){
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Home()));
-                    },
-                    color: Colors.white,
-                    icon: Icon(Icons.home),
-                  ),
-                  IconButton(
-                    onPressed: (){},
-                    color: Colors.white,
-                    icon: Icon(Icons.videogame_asset),
-                  ),
-                  IconButton(
-                    onPressed: (){
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Schedule(day: 1)));
-                    },
-                    color: Colors.white,
-                    icon: Icon(Icons.calendar_month),
-                  ),
-                  IconButton(
-                    onPressed: (){
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Team()));
-                    },
-                    color: Colors.white,
-                    icon: Icon(Icons.people),
-                  ),
-                ],
-              ),
+
+          ],
+        ),
+      ),
+      bottomNavigationBar: BottomAppBar(
+        color: Color.fromARGB(255, 3, 12, 34),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: <Widget>[
+            IconButton(
+              onPressed: (){
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => Home()));
+              },
+              color: Colors.white,
+              icon: Icon(Icons.home),
+            ),
+            IconButton(
+              onPressed: (){},
+              color: Colors.white,
+              icon: Icon(Icons.videogame_asset),
+            ),
+            IconButton(
+              onPressed: (){
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => Schedule(day: 1)));
+              },
+              color: Colors.white,
+              icon: Icon(Icons.calendar_month),
+            ),
+            IconButton(
+              onPressed: (){
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => Team()));
+              },
+              color: Colors.white,
+              icon: Icon(Icons.people),
             ),
           ],
         ),

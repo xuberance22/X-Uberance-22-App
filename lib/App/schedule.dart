@@ -1,7 +1,5 @@
-// ignore_for_file: no_logic_in_create_state, prefer_const_constructors, prefer_contains, non_constant_identifier_names, unused_element, sort_child_properties_last
-
 import 'package:flutter/material.dart';
-import 'package:xuberance22/App/teams.dart';
+import 'package:xuberance22_app/App/teams.dart';
 //import 'eventDetails.dart';
 import 'constants.dart' as c;
 import 'package:page_transition/page_transition.dart';
@@ -144,14 +142,14 @@ class _ScheduleState extends State<Schedule> {
         backgroundColor: Color.fromARGB(255, 3, 12, 34),
         centerTitle: true,
         title: Text(
-              'SCHEDULE',
-              style: TextStyle(
-                color: Colors.grey[200],
-                fontSize: 0.04 * MediaQuery.of(context).size.width,
-                // fontWeight: FontWeight.bold,
-                fontFamily: 'Xavier1',
-              ),
-            ),
+          'SCHEDULE',
+          style: TextStyle(
+            color: Colors.grey[200],
+            fontSize: 0.04 * MediaQuery.of(context).size.width,
+            // fontWeight: FontWeight.bold,
+            fontFamily: 'Xavier1',
+          ),
+        ),
       ),
       body: Container(
         decoration: BoxDecoration(
@@ -196,88 +194,6 @@ class _ScheduleState extends State<Schedule> {
                   SizedBox(
                     height: 20.0,
                   ),
-                  // Card(
-                  //   margin: EdgeInsets.symmetric(
-                  //       horizontal: MediaQuery.of(context).size.width * 0.0125,
-                  //       vertical: 0.0),
-                  //   color: Color.fromARGB(255, 3, 12, 34),
-                  //   child: Column(
-                  //     children: [
-                  //       Row(
-                  //         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  //         children: [
-                  //           ElevatedButton(
-                  //             onPressed: () {
-                  //               navigateToDay(context, 1);
-                  //             },
-                  //             style: ElevatedButton.styleFrom(
-                  //                 primary: Color.fromARGB(255, 3, 12, 34),
-                  //                 padding: EdgeInsets.all(7.5)),
-                  //             child: Text(
-                  //               'DAY 1',
-                  //               style: TextStyle(
-                  //                   color: Colors.grey[200],
-                  //                   fontSize:
-                  //                   MediaQuery.of(context).size.width *
-                  //                       0.055,
-                  //                   fontFamily: 'Xavier1'),
-                  //             ),
-                  //           ),
-                  //           ElevatedButton(
-                  //             onPressed: () {
-                  //               navigateToDay(context, 2);
-                  //             },
-                  //             style: ElevatedButton.styleFrom(
-                  //                 primary: Color.fromARGB(255, 3, 12, 34),
-                  //                 padding: EdgeInsets.all(7.5)),
-                  //             child: Text(
-                  //               'DAY 2',
-                  //               style: TextStyle(
-                  //                   color: Colors.grey[200],
-                  //                   fontSize:
-                  //                   MediaQuery.of(context).size.width *
-                  //                       0.055,
-                  //                   fontFamily: 'Xavier1'),
-                  //             ),
-                  //           ),
-                  //           ElevatedButton(
-                  //             onPressed: () {
-                  //               navigateToDay(context, 3);
-                  //             },
-                  //             style: ElevatedButton.styleFrom(
-                  //                 primary: Color.fromARGB(255, 3, 12, 34),
-                  //                 padding: EdgeInsets.all(7.5)),
-                  //             child: Text(
-                  //               'DAY 3',
-                  //               style: TextStyle(
-                  //                   color: Colors.grey[200],
-                  //                   fontSize:
-                  //                   MediaQuery.of(context).size.width *
-                  //                       0.055,
-                  //                   fontFamily: 'Xavier1'),
-                  //             ),
-                  //           ),
-                  //         ],
-                  //       ),
-                  //       Divider(
-                  //         height: 5.0,
-                  //         color: Colors.blue[900],
-                  //         thickness: 2.5,
-                  //       ),
-                  //       SizedBox(
-                  //           height:
-                  //           0.00125 * MediaQuery.of(context).size.height),
-                  //       day == 1
-                  //           ? _ListTileDisplay(
-                  //           c.Day1Event, c.Day1About, c.Day1Timing)
-                  //           : day == 2
-                  //           ? _ListTileDisplay(
-                  //           c.Day2Event, c.Day2About, c.Day2Timing)
-                  //           : _ListTileDisplay(
-                  //           c.Day3Event, c.Day3About, c.Day3Timing),
-                  //     ],
-                  //   ),
-                  // ),
                   Card(
                     margin: EdgeInsets.symmetric(
                         horizontal: MediaQuery.of(context).size.width * 0.0125,
@@ -365,6 +281,7 @@ class _ScheduleState extends State<Schedule> {
               ),
             ),
           ),
+          SizedBox(height: 0.01 * MediaQuery.of(context).size.height),
           BottomAppBar(
             color: Color.fromARGB(255, 3, 12, 34),
             child: Row(

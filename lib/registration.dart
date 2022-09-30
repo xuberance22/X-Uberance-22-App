@@ -3,10 +3,10 @@ import 'event.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'participants_form.dart';
 
-late String uid;
+late String? uid;
 
 class RegistrationList extends StatefulWidget {
-  RegistrationList(String u) {
+  RegistrationList(String? u) {
     uid = u;
   }
 
@@ -269,7 +269,7 @@ class _RegistrationListState extends State<RegistrationList> {
                               color: Colors.white,
                               fontFamily: 'Xavier1',
                               fontSize:
-                                  0.02 * MediaQuery.of(context).size.height),
+                              0.02 * MediaQuery.of(context).size.height),
                         ),
                         trailing: Text(
                           e.participants.toString(),
@@ -277,7 +277,7 @@ class _RegistrationListState extends State<RegistrationList> {
                               color: Colors.white,
                               fontFamily: 'Xavier1',
                               fontSize:
-                                  0.02 * MediaQuery.of(context).size.height),
+                              0.02 * MediaQuery.of(context).size.height),
                         ),
                         subtitle: Text(
                           e.about,
@@ -291,7 +291,7 @@ class _RegistrationListState extends State<RegistrationList> {
                     ),
                   ],
                 ),
-              SizedBox(height: 0.05*MediaQuery.of(context).size.height)
+              SizedBox(height: 0.05 * MediaQuery.of(context).size.height)
             ],
           ),
         ),

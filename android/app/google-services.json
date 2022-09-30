@@ -7,9 +7,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:859313741550:android:5bd14b9a07747634c8ddff",
+        "mobilesdk_app_id": "1:859313741550:android:01ac16f46a5f0840c8ddff",
         "android_client_info": {
-          "package_name": "com.example.xuberance22"
+          "package_name": "com.example.xuberance22_app"
         }
       },
       "oauth_client": [

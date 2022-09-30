@@ -146,7 +146,7 @@ class _TeamState extends State<Team> {
                             color: Colors.white,
                             fontSize:
                             0.03125 * MediaQuery.of(context).size.width,
-                            fontFamily: 'Xavier3',
+                            fontFamily: 'Xavier2',
                             letterSpacing: 0.00175 * width),
                       ),
                     ]),
@@ -505,29 +505,17 @@ PS: If you can’t find him, he’s probably chewing gum in front of “some peo
                             Text(
                               """
 Hitansh Agarwal
-
 Vedant Kejariwal
-
 Shaurya Beriwala
-
 Akul Arora
-
 Ashmeet John Lakra
-
 Lakshya Singhi
-
 Pranshu Nemani
-
 Rishit Seksaria
-
 Sarthak Poddar
-
 Shreevrind Kajaria
-
 Trijal Srimal
-
 Vyom Agarwal
-
 Aritra Das
                                 """,
                               textAlign: TextAlign.center,
