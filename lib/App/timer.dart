@@ -77,7 +77,7 @@ double a=0;
           )
         ),
         SizedBox(height:a*0.05),
-        Text(header, style: TextStyle(color: Colors.white,fontFamily: 'Xavier1',)),
+        Text(header, style: const TextStyle(color: Colors.white,fontFamily: 'Xavier1',)),
       ],
     );
   }

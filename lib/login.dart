@@ -50,9 +50,9 @@ class _LoginState extends State<Login> {
                                           context,
                                           MaterialPageRoute(
                                               builder: (context) =>
-                                                  EventsOnStage()));
+                                                  const EventsOnStage()));
                                     },
-                                    icon: Icon(
+                                    icon: const Icon(
                                       Icons.arrow_back,
                                       size: 30,
                                       color: Colors.white,
@@ -71,7 +71,7 @@ class _LoginState extends State<Login> {
                                       launchUrl(Uri.parse(
                                           "https://youtu.be/dQw4w9WgXcQ"));
                                     },
-                                    icon: Icon(
+                                    icon: const Icon(
                                       Icons.arrow_back,
                                       size: 30,
                                       color: Colors.transparent,
@@ -104,7 +104,7 @@ class _LoginState extends State<Login> {
                                   email = value;
                                 });
                               },
-                              style: TextStyle(
+                              style: const TextStyle(
                                   color: Colors.white, fontFamily: 'Xavier3'),
                             )),
                         SizedBox(
@@ -128,7 +128,7 @@ class _LoginState extends State<Login> {
                                       width: 2.0),
                                 ),
                               ),
-                              style: TextStyle(
+                              style: const TextStyle(
                                   color: Colors.white, fontFamily: 'Xavier3'),
                               obscureText: true,
                               onChanged: (value) {
@@ -147,9 +147,9 @@ class _LoginState extends State<Login> {
                                 SignIn();
                               },
                               style: ElevatedButton.styleFrom(
-                                backgroundColor: Color.fromRGBO(3, 12, 34, 1),
+                                backgroundColor: const Color.fromRGBO(3, 12, 34, 1),
                               ),
-                              child: Text(
+                              child: const Text(
                                 "Login",
                                 style: TextStyle(
                                     color: Colors.white, fontFamily: 'Xavier1'),
@@ -171,7 +171,7 @@ class _LoginState extends State<Login> {
       return showDialog(
           context: context,
           builder: (context) => AlertDialog(
-                backgroundColor: Color.fromRGBO(3, 12, 34, 0.7),
+                backgroundColor: const Color.fromRGBO(3, 12, 34, 0.7),
                 content: Text('Incorrect Credentials',
                     textAlign: TextAlign.center,
                     style: TextStyle(
@@ -183,7 +183,7 @@ class _LoginState extends State<Login> {
 
     Navigator.pushReplacement(
       context,
-      MaterialPageRoute(builder: (BuildContext context) => this.widget),
+      MaterialPageRoute(builder: (BuildContext context) => widget),
     );
   }
 }

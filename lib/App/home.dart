@@ -8,6 +8,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class Home extends StatefulWidget {
+  const Home({super.key});
+
   @override
   State<Home> createState() => _HomeState();
 }
@@ -18,8 +20,8 @@ class _HomeState extends State<Home> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: Color.fromARGB(255, 3, 12, 34),
-        title: Text(
+        backgroundColor: const Color.fromARGB(255, 3, 12, 34),
+        title: const Text(
           'Home',
           style: TextStyle(
             color: Colors.white,
@@ -28,7 +30,7 @@ class _HomeState extends State<Home> {
         ),
       ),
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(
               image: AssetImage('assets/FinalBG.png'), fit: BoxFit.cover),
         ),
@@ -109,38 +111,36 @@ class _HomeState extends State<Home> {
                         0.05 * MediaQuery.of(context).size.height,
                         0.05 * MediaQuery.of(context).size.width,
                         0.0),
-                    child: Image(
+                    child: const Image(
                       image: AssetImage('assets/logo3.png'),
                     ),
                   ),
-                  SizedBox(height: 3),
+                  const SizedBox(height: 3),
                   Container(
                     padding: EdgeInsets.fromLTRB(
                         0.06 * MediaQuery.of(context).size.width,
                         0.0,
                         0.06 * MediaQuery.of(context).size.width,
                         0.0),
-                    child: Image(
+                    child: const Image(
                       image: AssetImage('assets/name1.png'),
                     ),
                   ),
-                  SizedBox(height: 3),
+                  const SizedBox(height: 3),
                   Container(
                     padding: EdgeInsets.fromLTRB(
                         0.085 * MediaQuery.of(context).size.width,
                         0.0,
                         0.085 * MediaQuery.of(context).size.width,
                         0.0),
-                    child: Image(
+                    child: const Image(
                       image: AssetImage('assets/motto1.png'),
                     ),
                   ),
                   SizedBox(
                     height: 0.05 * MediaQuery.of(context).size.height,
                   ),
-                  Container(
-                    child: Countdown(),
-                  ),
+                  const Countdown(),
                   SizedBox(height: 0.03 * MediaQuery.of(context).size.height),
                   Divider(
                       thickness: 0.002 * MediaQuery.of(context).size.height,
@@ -167,18 +167,10 @@ class _HomeState extends State<Home> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => AboutUs()));
+                                  builder: (context) => const AboutUs()));
                         },
-                        child: Text(
-                          'ABOUT US',
-                          style: TextStyle(
-                            fontFamily: 'Xavier2',
-                            fontSize:
-                                0.0725 * MediaQuery.of(context).size.width,
-                          ),
-                        ),
                         style: ElevatedButton.styleFrom(
-                          primary: Color.fromRGBO(3, 12, 34, 0.5),
+                          backgroundColor: const Color.fromRGBO(3, 12, 34, 0.5),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(
                                 0.05 * MediaQuery.of(context).size.width),
@@ -186,6 +178,14 @@ class _HomeState extends State<Home> {
                           fixedSize: Size(
                             0.625 * MediaQuery.of(context).size.width,
                             .1125 * MediaQuery.of(context).size.height,
+                          ),
+                        ),
+                        child: Text(
+                          'ABOUT US',
+                          style: TextStyle(
+                            fontFamily: 'Xavier2',
+                            fontSize:
+                                0.0725 * MediaQuery.of(context).size.width,
                           ),
                         ),
                       ),
@@ -263,7 +263,7 @@ class _HomeState extends State<Home> {
                                       "https://www.instagram.com/xuberance22/"));
                                 },
                                 color: Colors.white,
-                                icon: FaIcon(FontAwesomeIcons.instagram),
+                                icon: const FaIcon(FontAwesomeIcons.instagram),
                               ),
                               TextButton(
                                 onPressed: () {
@@ -294,7 +294,7 @@ class _HomeState extends State<Home> {
                                       "https://www.youtube.com/channel/UCJoQvLpNvAd0jhklhv0-1Jw"));
                                 },
                                 color: Colors.white,
-                                icon: FaIcon(FontAwesomeIcons.youtube),
+                                icon: const FaIcon(FontAwesomeIcons.youtube),
                               ),
                               TextButton(
                                 onPressed: () {
@@ -333,7 +333,7 @@ class _HomeState extends State<Home> {
             ),
           ),
           BottomAppBar(
-            color: Color.fromARGB(255, 3, 12, 34),
+            color: const Color.fromARGB(255, 3, 12, 34),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
@@ -342,37 +342,37 @@ class _HomeState extends State<Home> {
                     Navigator.pushReplacementNamed(context, '/');
                   },
                   color: Colors.white,
-                  icon: Icon(Icons.home),
+                  icon: const Icon(Icons.home),
                 ),
                 IconButton(
                   onPressed: () {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => EventsSporting()));
+                            builder: (context) => const EventsSporting()));
                   },
                   color: Colors.white,
-                  icon: Icon(Icons.videogame_asset),
+                  icon: const Icon(Icons.videogame_asset),
                 ),
                 IconButton(
                   onPressed: () {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => Schedule(
+                            builder: (context) => const Schedule(
                                   day: 1,
                                 )));
                   },
                   color: Colors.white,
-                  icon: Icon(Icons.calendar_month),
+                  icon: const Icon(Icons.calendar_month),
                 ),
                 IconButton(
                   onPressed: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => Team()));
+                        MaterialPageRoute(builder: (context) => const Team()));
                   },
                   color: Colors.white,
-                  icon: Icon(Icons.people),
+                  icon: const Icon(Icons.people),
                 ),
               ],
             ),

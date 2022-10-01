@@ -1,26 +1,23 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, unnecessary_string_interpolations, no_logic_in_create_state
-
 import 'dart:ui';
 import "package:flutter/material.dart";
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
 //import 'package:flutter/gestures.dart';
-import 'package:flutter/cupertino.dart';
 
 class Eventss extends StatefulWidget {
-  String name;
-  String about;
-  String category;
-  String location;
-  String day;
-  String time;
-  String participants;
-  String phrase;
-  String rules;
-  String link;
-  String guidelines;
+  final String name;
+  final String about;
+  final String category;
+  final String location;
+  final String day;
+  final String time;
+  final String participants;
+  final String phrase;
+  final String rules;
+  final String link;
+  final String guidelines;
 
-  Eventss(
+  const Eventss(
       {Key? key,
         required this.name,
         required this.about,
@@ -83,7 +80,7 @@ class _EventssState extends State<Eventss> {
 
   Widget _eventRules() {
     return Hero(
-      tag: "$tag",
+      tag: tag,
       child: Stack(
         children: [
           Column(
@@ -93,7 +90,7 @@ class _EventssState extends State<Eventss> {
                 onPressed: () {
                   _panelController1.close();
                 },
-                icon: Icon(Icons.keyboard_arrow_down_rounded,
+                icon: const Icon(Icons.keyboard_arrow_down_rounded,
                     color: Colors.white),
               ),
               Text(
@@ -117,7 +114,7 @@ class _EventssState extends State<Eventss> {
                         children: [
                           Text(
 
-                            "$rules",
+                            rules,
                             textAlign: TextAlign.left,
                             style: TextStyle(
                                 fontFamily: "Xavier3",
@@ -154,7 +151,7 @@ class _EventssState extends State<Eventss> {
                     onPressed: () {
                       _pageController2.jumpToPage(1);
                     },
-                    icon: Icon(Icons.arrow_forward_ios_rounded,
+                    icon: const Icon(Icons.arrow_forward_ios_rounded,
                         color: Colors.white),
                     iconSize: 0.1*MediaQuery.of(context).size.width,
                   ),
@@ -169,7 +166,7 @@ class _EventssState extends State<Eventss> {
 
   Widget _generalRules() {
     return Hero(
-      tag: "$tag",
+      tag: tag,
       child: Stack(
         children: [
           Column(
@@ -179,7 +176,7 @@ class _EventssState extends State<Eventss> {
                 onPressed: () {
                   _panelController1.close();
                 },
-                icon: Icon(Icons.keyboard_arrow_down_rounded,
+                icon: const Icon(Icons.keyboard_arrow_down_rounded,
                     color: Colors.white),
               ),
               Text(
@@ -199,7 +196,7 @@ class _EventssState extends State<Eventss> {
                     child: Padding(
                       padding: const EdgeInsets.fromLTRB(30, 16, 20, 8),
                       child: Text(
-                        "$guidelines",
+                        guidelines,
                         textAlign: TextAlign.left,
                         style: TextStyle(
                             fontFamily: "Xavier3",
@@ -220,7 +217,7 @@ class _EventssState extends State<Eventss> {
                 onPressed: () {
                   _pageController2.jumpToPage(0);
                 },
-                icon: Icon(Icons.arrow_back_ios, color: Colors.white),
+                icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
                 iconSize: 0.1*MediaQuery.of(context).size.width,
               ),
               SizedBox(width: 0.015*MediaQuery.of(context).size.width),
@@ -235,10 +232,10 @@ class _EventssState extends State<Eventss> {
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: MediaQuery.of(context).size.height * 0.055,
-        backgroundColor: Color.fromARGB(255, 3, 12, 34),
+        backgroundColor: const Color.fromARGB(255, 3, 12, 34),
         centerTitle: true,
         title: Text(
-              '$name',
+              name,
               style: TextStyle(
                 color: Colors.grey[200],
                 fontSize: 0.04 * MediaQuery.of(context).size.width,
@@ -249,7 +246,7 @@ class _EventssState extends State<Eventss> {
       ),
       body: SingleChildScrollView(
         child: Container(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             image: DecorationImage(
               image: AssetImage("assets/FinalBG.png"),
               fit: BoxFit.cover,
@@ -264,17 +261,15 @@ class _EventssState extends State<Eventss> {
               Center(
                 child: Column(
                   children: <Widget>[
-                    Container(
-                      child: Image.asset(
-                        '$link',
+                      Image.asset(
+                        link,
                         height: MediaQuery.of(context).size.height * 0.32,
                         width: 450.0,
                         fit: BoxFit.contain,
                       ),
-                    ),
                     SizedBox(height: 0.04 * MediaQuery.of(context).size.height),
                     Text(
-                      '$name',
+                      name,
                       style: TextStyle(
                           fontSize: 0.0925 * MediaQuery.of(context).size.width,
                           color: Colors.grey[200],
@@ -284,7 +279,7 @@ class _EventssState extends State<Eventss> {
                       height: 0.035 * MediaQuery.of(context).size.height,
                     ),
                     Text(
-                      '$about',
+                      about,
                       style: TextStyle(
                           fontSize: 0.05 * MediaQuery.of(context).size.width,
                           // letterSpacing: 2.0,
@@ -359,7 +354,7 @@ class _EventssState extends State<Eventss> {
                     ),
                     Text(
                       textAlign: TextAlign.center,
-                      '$phrase',
+                      phrase,
                       style: TextStyle(
                           fontSize: 0.03 * MediaQuery.of(context).size.width,
                           // letterSpacing: 2.0,
@@ -415,7 +410,7 @@ class _EventssState extends State<Eventss> {
 
   Widget _Page2() {
     return Container(
-        color: Color.fromARGB(255, 3, 12, 34),
+        color: const Color.fromARGB(255, 3, 12, 34),
         child: Container(
             color: Colors.black.withOpacity(0.3),
             child: Column(children: [
@@ -423,8 +418,8 @@ class _EventssState extends State<Eventss> {
                   child: BackdropFilter(
                       filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
                       child: Card(
-                        color: Color.fromARGB(255, 3, 12, 34).withOpacity(0.2),
-                        shape: RoundedRectangleBorder(
+                        color: const Color.fromARGB(255, 3, 12, 34).withOpacity(0.2),
+                        shape: const RoundedRectangleBorder(
                             borderRadius: BorderRadius.only(
                                 topLeft: Radius.circular(70),
                                 topRight: Radius.circular(70))),
@@ -441,18 +436,16 @@ class _EventssState extends State<Eventss> {
     return ScreenUtilInit(
         builder: (context, child) => Scaffold(
           extendBodyBehindAppBar: true,
-          body: Container(
-            child: SlidingUpPanel(
-              controller: _panelController1,
-              body: GestureDetector(
-                  child: _Page1(),
-                  onVerticalDragUpdate: (DragUpdateDetails) {
-                    _panelController1.open();
-                  }),
-              panel: _Page2(),
-              minHeight: 0,
-              maxHeight: 0.9 * MediaQuery.of(context).size.height,
-            ),
+          body: SlidingUpPanel(
+            controller: _panelController1,
+            body: GestureDetector(
+                child: _Page1(),
+                onVerticalDragUpdate: (DragUpdateDetails) {
+                  _panelController1.open();
+                }),
+            panel: _Page2(),
+            minHeight: 0,
+            maxHeight: 0.9 * MediaQuery.of(context).size.height,
           ),
         ));
   }

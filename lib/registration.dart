@@ -6,7 +6,7 @@ import 'participants_form.dart';
 late String? uid;
 
 class RegistrationList extends StatefulWidget {
-  RegistrationList(String? u) {
+  RegistrationList(String? u, {super.key}) {
     uid = u;
   }
 
@@ -221,7 +221,7 @@ class _RegistrationListState extends State<RegistrationList> {
               onPressed: () {
                 FirebaseAuth.instance.signOut();
               },
-              icon: Icon(Icons.logout))
+              icon: const Icon(Icons.logout))
         ],
       ),
       extendBodyBehindAppBar: true,
@@ -246,7 +246,7 @@ class _RegistrationListState extends State<RegistrationList> {
                         fontFamily: "Xavier1",
                         color: Colors.white,
                         fontSize: 0.02 * MediaQuery.of(context).size.height)),
-                subtitle: Text(
+                subtitle: const Text(
                   "Event Description",
                   style: TextStyle(fontFamily: "Xavier3", color: Colors.white),
                 ),
@@ -256,13 +256,13 @@ class _RegistrationListState extends State<RegistrationList> {
                   children: [
                     SizedBox(height: 0.02 * MediaQuery.of(context).size.height),
                     Container(
-                      margin: EdgeInsets.fromLTRB(20, 10, 20, 0),
+                      margin: const EdgeInsets.fromLTRB(20, 10, 20, 0),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         color: Colors.black.withOpacity(0.4),
                       ),
                       child: ListTile(
-                        contentPadding: EdgeInsets.all(10),
+                        contentPadding: const EdgeInsets.all(10),
                         title: Text(
                           e.name,
                           style: TextStyle(
@@ -281,7 +281,7 @@ class _RegistrationListState extends State<RegistrationList> {
                         ),
                         subtitle: Text(
                           e.about,
-                          style: TextStyle(
+                          style: const TextStyle(
                               color: Colors.white, fontFamily: 'Xavier3'),
                         ),
                         onTap: () {

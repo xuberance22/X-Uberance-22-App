@@ -8,8 +8,8 @@ import 'eventSporting.dart';
 import 'home.dart';
 
 class Schedule extends StatefulWidget {
-  int day = 0;
-  Schedule({Key? key, required this.day}) : super(key: key);
+  final int day;
+  const Schedule({Key? key, required this.day}) : super(key: key);
 
   @override
   State<Schedule> createState() => _ScheduleState(day: day);
@@ -30,17 +30,17 @@ class _ScheduleState extends State<Schedule> {
 
   Future<void> navigateToDescription(context, String a) async {
     late Widget ret;
-    if ((c.SportingDay1.indexOf(a) > -1) ||
-        (c.SportingDay2.indexOf(a) > -1) ||
-        (c.SportingDay3.indexOf(a) > -1)) {
+    if ((c.SportingDay1.contains(a)) ||
+        (c.SportingDay2.contains(a)) ||
+        (c.SportingDay3.contains(a))) {
       ret = c.Sporting[c.Sporting1.indexOf(a)];
-    } else if ((c.OffStageDay1.indexOf(a) > -1) ||
-        (c.OffStageDay2.indexOf(a) > -1) ||
-        (c.OffStageDay3.indexOf(a) > -1)) {
+    } else if ((c.OffStageDay1.contains(a)) ||
+        (c.OffStageDay2.contains(a)) ||
+        (c.OffStageDay3.contains(a))) {
       ret = c.OffStage[c.Offstage1.indexOf(a)];
-    } else if ((c.OnStageDay1.indexOf(a) > -1) ||
-        (c.OnStageDay2.indexOf(a) > -1) ||
-        (c.OnStageDay3.indexOf(a) > -1)) {
+    } else if ((c.OnStageDay1.contains(a)) ||
+        (c.OnStageDay2.contains(a)) ||
+        (c.OnStageDay3.contains(a))) {
       ret = c.OnStage[c.Onstage1.indexOf(a)];
     }
 
@@ -54,7 +54,8 @@ class _ScheduleState extends State<Schedule> {
   }
 
   Widget _ListTile(event, about, time) {
-    return Container(
+    return SizedBox(
+      height: .12 * MediaQuery.of(context).size.height,
       child: TextButton(
         onPressed: () {
           navigateToDescription(context, event);
@@ -83,7 +84,6 @@ class _ScheduleState extends State<Schedule> {
           ),
         ),
       ),
-      height: .12 * MediaQuery.of(context).size.height,
     );
   }
 
@@ -94,7 +94,7 @@ class _ScheduleState extends State<Schedule> {
     } else {
       height = 0.55 * MediaQuery.of(context).size.height;
     }
-    return Container(
+    return SizedBox(
       height: height,
       child: Column(
         children: [
@@ -112,34 +112,20 @@ class _ScheduleState extends State<Schedule> {
 
   @override
   Widget build(BuildContext context) {
-    double width = MediaQuery.of(context).size.width;
-    double height = MediaQuery.of(context).size.height;
-    List Events = [];
-    List Timing = [];
-    List About = [];
     String date = "";
     if (day == 1) {
-      Events = c.Day1Event;
-      Timing = c.Day1Timing;
-      About = c.Day1About;
       date = "14TH";
     }
     if (day == 2) {
-      Events = c.Day2Event;
-      Timing = c.Day2Timing;
-      About = c.Day2About;
       date = "15TH";
     }
     if (day == 3) {
-      Events = c.Day3Event;
-      Timing = c.Day3Timing;
-      About = c.Day3About;
       date = "16TH";
     }
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: MediaQuery.of(context).size.height * 0.055,
-        backgroundColor: Color.fromARGB(255, 3, 12, 34),
+        backgroundColor: const Color.fromARGB(255, 3, 12, 34),
         centerTitle: true,
         title: Text(
           'SCHEDULE',
@@ -152,7 +138,7 @@ class _ScheduleState extends State<Schedule> {
         ),
       ),
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage("assets/FinalBG.png"),
             fit: BoxFit.cover,
@@ -167,18 +153,18 @@ class _ScheduleState extends State<Schedule> {
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      SizedBox(
+                      const SizedBox(
                         height: 30.0,
                       ),
                       Text(
-                        '$date',
+                        date,
                         style: TextStyle(
                           color: Colors.grey[200],
                           fontSize: MediaQuery.of(context).size.width * 0.1,
                           fontFamily: 'Xavier2',
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 0.0,
                       ),
                       Text(
@@ -191,14 +177,14 @@ class _ScheduleState extends State<Schedule> {
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20.0,
                   ),
                   Card(
                     margin: EdgeInsets.symmetric(
                         horizontal: MediaQuery.of(context).size.width * 0.0125,
                         vertical: 0.0),
-                    color: Color.fromARGB(255, 3, 12, 34),
+                    color: const Color.fromARGB(255, 3, 12, 34),
                     child: Column(
                       children: [
                         Row(
@@ -209,8 +195,8 @@ class _ScheduleState extends State<Schedule> {
                                 navigateToDay(context, 1);
                               },
                               style: ElevatedButton.styleFrom(
-                                  primary: Color.fromARGB(255, 3, 12, 34),
-                                  padding: EdgeInsets.all(7.5)),
+                                  backgroundColor: const Color.fromARGB(255, 3, 12, 34),
+                                  padding: const EdgeInsets.all(7.5)),
                               child: Text(
                                 'DAY 1',
                                 style: TextStyle(
@@ -226,8 +212,8 @@ class _ScheduleState extends State<Schedule> {
                                 navigateToDay(context, 2);
                               },
                               style: ElevatedButton.styleFrom(
-                                  primary: Color.fromARGB(255, 3, 12, 34),
-                                  padding: EdgeInsets.all(7.5)),
+                                  backgroundColor: const Color.fromARGB(255, 3, 12, 34),
+                                  padding: const EdgeInsets.all(7.5)),
                               child: Text(
                                 'DAY 2',
                                 style: TextStyle(
@@ -243,8 +229,8 @@ class _ScheduleState extends State<Schedule> {
                                 navigateToDay(context, 3);
                               },
                               style: ElevatedButton.styleFrom(
-                                  primary: Color.fromARGB(255, 3, 12, 34),
-                                  padding: EdgeInsets.all(7.5)),
+                                  backgroundColor: const Color.fromARGB(255, 3, 12, 34),
+                                  padding: const EdgeInsets.all(7.5)),
                               child: Text(
                                 'DAY 3',
                                 style: TextStyle(
@@ -283,38 +269,38 @@ class _ScheduleState extends State<Schedule> {
           ),
           SizedBox(height: 0.01 * MediaQuery.of(context).size.height),
           BottomAppBar(
-            color: Color.fromARGB(255, 3, 12, 34),
+            color: const Color.fromARGB(255, 3, 12, 34),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
                 IconButton(
                   onPressed: (){
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => Home()));
+                        MaterialPageRoute(builder: (context) => const Home()));
                   },
                   color: Colors.white,
-                  icon: Icon(Icons.home),
+                  icon: const Icon(Icons.home),
                 ),
                 IconButton(
                   onPressed: (){
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => EventsSporting()));
+                        MaterialPageRoute(builder: (context) => const EventsSporting()));
                   },
                   color: Colors.white,
-                  icon: Icon(Icons.videogame_asset),
+                  icon: const Icon(Icons.videogame_asset),
                 ),
                 IconButton(
                   onPressed: (){},
                   color: Colors.white,
-                  icon: Icon(Icons.calendar_month),
+                  icon: const Icon(Icons.calendar_month),
                 ),
                 IconButton(
                   onPressed: (){
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => Team()));
+                        MaterialPageRoute(builder: (context) => const Team()));
                   },
                   color: Colors.white,
-                  icon: Icon(Icons.people),
+                  icon: const Icon(Icons.people),
                 ),
               ],
             ),

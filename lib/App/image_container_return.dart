@@ -45,7 +45,7 @@ class _ImgRtrState extends State<ImgRtr> {
                 context: context,
                 builder: (context) => AlertDialog(
                   scrollable: true,
-                  backgroundColor: Color.fromARGB(255, 3, 12, 34),
+                  backgroundColor: const Color.fromARGB(255, 3, 12, 34),
                   content: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -56,7 +56,7 @@ class _ImgRtrState extends State<ImgRtr> {
                         decoration: BoxDecoration(
                           image: DecorationImage(
                             image: AssetImage(
-                                '$link'),
+                                link),
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -119,7 +119,7 @@ class _ImgRtrState extends State<ImgRtr> {
               width: 0.3 * MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage('$link'),
+                  image: AssetImage(link),
                   fit: BoxFit.cover,
                 ),
               ),

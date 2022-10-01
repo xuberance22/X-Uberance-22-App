@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'login.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'App/home.dart';
 
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
-      options: FirebaseOptions(
+    name: "X-Uberance '22",
+      options: const FirebaseOptions(
           apiKey: "AIzaSyCsYQCZyDlngfvwQyNDwgaGaubEOR5i1zY",
           appId: "1:859313741550:web:b70bd0d9b5bad15fc8ddff",
           messagingSenderId: "859313741550",
@@ -32,9 +32,9 @@ class MyApp extends StatelessWidget {
                 "Sorry! We are experiencing some technical issues, check back in sometime!");
           }
           if (snapshot.connectionState == ConnectionState.done) {
-            return Home();
+            return const Home();
           }
-          return CircularProgressIndicator();
+          return const CircularProgressIndicator();
         },
       ),
     );

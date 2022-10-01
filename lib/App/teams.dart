@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:page_transition/page_transition.dart';
 import '../App/image_container_return.dart';
 import 'home.dart';
 import 'schedule.dart';
 import 'eventSporting.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class Team extends StatefulWidget {
   const Team({Key? key}) : super(key: key);
@@ -21,7 +19,7 @@ class _TeamState extends State<Team> {
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: MediaQuery.of(context).size.height * 0.055,
-        backgroundColor: Color.fromARGB(255, 3, 12, 34),
+        backgroundColor: const Color.fromARGB(255, 3, 12, 34),
         centerTitle: true,
         title: Text(
           'TEAM',
@@ -91,7 +89,7 @@ class _TeamState extends State<Team> {
                               child: Container(
                                 height: 0.3 * MediaQuery.of(context).size.width,
                                 width: 0.3 * MediaQuery.of(context).size.width,
-                                decoration: BoxDecoration(
+                                decoration: const BoxDecoration(
                                   image: DecorationImage(
                                     image:
                                     AssetImage('teamPhoto/JOEETA_BASU.png'),
@@ -109,7 +107,7 @@ class _TeamState extends State<Team> {
                               child: Container(
                                 height: 0.3 * MediaQuery.of(context).size.width,
                                 width: 0.3 * MediaQuery.of(context).size.width,
-                                decoration: BoxDecoration(
+                                decoration: const BoxDecoration(
                                   image: DecorationImage(
                                     image: AssetImage(
                                         'teamPhoto/SOMNATH_DHAR.png'),
@@ -451,27 +449,27 @@ PS: If you can’t find him, he’s probably chewing gum in front of “some peo
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         SizedBox(height: height * .0),
-                        Department(
+                        const Department(
                             dep: "SECURITY",
                             name1: "Arpit  Jain",
                             name2: "Vinayak  Puri"),
-                        Department(
+                        const Department(
                             dep: "TRANSPORT",
                             name1: "Rajvir Singh Sachar",
                             name2: "Harshit  Singhania"),
-                        Department(
+                        const Department(
                             dep: "HOSPITALITY",
                             name1: "Md. Zayed Khan",
                             name2: "Mayank  Malhotra"),
-                        Department(
+                        const Department(
                             dep: "DEVELOPMENT",
                             name1: "Shaurya Beriwala",
                             name2: ""),
-                        Department(
+                        const Department(
                             dep: "SCHOOL-IN-CHARGE",
                             name1: "Rishabh Mukherjee",
                             name2: "Varenya Kanoria"),
-                        Department(
+                        const Department(
                             dep: "LOGISTICS",
                             name1: "Ayush Narnolia",
                             name2: "Ansh Binani"),
@@ -505,17 +503,29 @@ PS: If you can’t find him, he’s probably chewing gum in front of “some peo
                             Text(
                               """
 Hitansh Agarwal
+
 Vedant Kejariwal
+
 Shaurya Beriwala
+
 Akul Arora
+
 Ashmeet John Lakra
+
 Lakshya Singhi
+
 Pranshu Nemani
+
 Rishit Seksaria
+
 Sarthak Poddar
+
 Shreevrind Kajaria
+
 Trijal Srimal
+
 Vyom Agarwal
+
 Aritra Das
                                 """,
                               textAlign: TextAlign.center,
@@ -533,38 +543,38 @@ Aritra Das
               ),
             ),
             BottomAppBar(
-              color: Color.fromARGB(255, 3, 12, 34),
+              color: const Color.fromARGB(255, 3, 12, 34),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
                   IconButton(
                     onPressed: (){
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Home()));
+                          MaterialPageRoute(builder: (context) => const Home()));
                     },
                     color: Colors.white,
-                    icon: Icon(Icons.home),
+                    icon: const Icon(Icons.home),
                   ),
                   IconButton(
                     onPressed: (){
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => EventsSporting()));
+                          MaterialPageRoute(builder: (context) => const EventsSporting()));
                     },
                     color: Colors.white,
-                    icon: Icon(Icons.videogame_asset),
+                    icon: const Icon(Icons.videogame_asset),
                   ),
                   IconButton(
                     onPressed: (){
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Schedule(day: 1)));
+                          MaterialPageRoute(builder: (context) => const Schedule(day: 1)));
                     },
                     color: Colors.white,
-                    icon: Icon(Icons.calendar_month),
+                    icon: const Icon(Icons.calendar_month),
                   ),
                   IconButton(
                     onPressed: (){},
                     color: Colors.white,
-                    icon: Icon(Icons.people),
+                    icon: const Icon(Icons.people),
                   ),
                 ],
               ),
@@ -577,10 +587,10 @@ Aritra Das
 }
 
 class Department extends StatefulWidget {
-  String dep;
-  String name1;
-  String name2;
-  Department(
+  final String dep;
+  final String name1;
+  final String name2;
+  const Department(
       {Key? key, required this.dep, required this.name1, required this.name2})
       : super(key: key);
 
@@ -599,7 +609,6 @@ class _DepartmentState extends State<Department> {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
-    double height = MediaQuery.of(context).size.height;
     return Center(
       child: Column(
         children: [

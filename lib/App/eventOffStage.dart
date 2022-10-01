@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:xuberance22_app/App/schedule.dart';
-import 'package:xuberance22_app/App/teams.dart';
+import '../App/schedule.dart';
+import '../App/teams.dart';
 import '../login.dart';
 import 'eventOnStage.dart';
 import 'eventSporting.dart';
@@ -71,7 +71,7 @@ class _EventsOffStageState extends State<EventsOffStage> {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         toolbarHeight: MediaQuery.of(context).size.height * 0.055,
-        backgroundColor: Color.fromARGB(255, 3, 12, 34),
+        backgroundColor: const Color.fromARGB(255, 3, 12, 34),
         title: Text(
           'Events',
           style: TextStyle(
@@ -84,7 +84,7 @@ class _EventsOffStageState extends State<EventsOffStage> {
         centerTitle: true,
         actions: <Widget>[
           IconButton(
-            icon: Icon(Icons.account_circle),
+            icon: const Icon(Icons.account_circle),
             color: Colors.white,
             onPressed: () {
               Navigator.push(
@@ -100,7 +100,7 @@ class _EventsOffStageState extends State<EventsOffStage> {
       ),
       extendBody: true,
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage("assets/FinalBG.png"),
             fit: BoxFit.cover,
@@ -114,7 +114,7 @@ class _EventsOffStageState extends State<EventsOffStage> {
                 bottom: (MediaQuery.of(context).size.height) * 0.01,
               ),
             ),
-            SizedBox(height: 90),
+            const SizedBox(height: 90),
             Expanded(
               child: Scrollbar(
                 child: Column(
@@ -126,6 +126,8 @@ class _EventsOffStageState extends State<EventsOffStage> {
                             onPressed: () {
                               navigateToEventsSporting();
                             },
+                            style: ElevatedButton.styleFrom(
+                                backgroundColor: const Color.fromRGBO(3, 12, 34, 0.8)),
                             child: Text(
                               "Sporting",
                               style: TextStyle(
@@ -135,13 +137,13 @@ class _EventsOffStageState extends State<EventsOffStage> {
                                 // fontWeight: FontWeight.bold,
                                 fontFamily: 'Xavier1',
                               ),
-                            ),
-                            style: ElevatedButton.styleFrom(
-                                primary: Color.fromRGBO(3, 12, 34, 0.8))),
+                            )),
                         ElevatedButton(
                             onPressed: () {
                               navigateToEventsOnStage();
                             },
+                            style: ElevatedButton.styleFrom(
+                                backgroundColor: const Color.fromRGBO(3, 12, 34, 0.8)),
                             child: Text(
                               "On-Stage",
                               style: TextStyle(
@@ -151,11 +153,11 @@ class _EventsOffStageState extends State<EventsOffStage> {
                                 // fontWeight: FontWeight.bold,
                                 fontFamily: 'Xavier1',
                               ),
-                            ),
-                            style: ElevatedButton.styleFrom(
-                                primary: Color.fromRGBO(3, 12, 34, 0.8))),
+                            )),
                         ElevatedButton(
                             onPressed: () {},
+                            style: ElevatedButton.styleFrom(
+                                backgroundColor: Colors.transparent, elevation: 0.0),
                             child: Text(
                               "Off-Stage",
                               style: TextStyle(
@@ -165,9 +167,7 @@ class _EventsOffStageState extends State<EventsOffStage> {
                                 // fontWeight: FontWeight.bold,
                                 fontFamily: 'Xavier1',
                               ),
-                            ),
-                            style: ElevatedButton.styleFrom(
-                                primary: Colors.transparent, elevation: 0.0)),
+                            )),
                       ],
                     ),
                     SizedBox(height: 0.05 * height),
@@ -191,7 +191,7 @@ class _EventsOffStageState extends State<EventsOffStage> {
                                       decoration: BoxDecoration(
                                         image: DecorationImage(
                                           image: AssetImage(
-                                              "${"namedimages/" + event2}.png"),
+                                              "namedimages/$event2.png"),
                                           fit: BoxFit.contain,
                                         ),
                                       ),
@@ -213,38 +213,38 @@ class _EventsOffStageState extends State<EventsOffStage> {
         ),
       ),
       bottomNavigationBar: BottomAppBar(
-        color: Color.fromARGB(255, 3, 12, 34),
+        color: const Color.fromARGB(255, 3, 12, 34),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
             IconButton(
               onPressed: () {
                 Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => Home()));
+                    context, MaterialPageRoute(builder: (context) => const Home()));
               },
               color: Colors.white,
-              icon: Icon(Icons.home),
+              icon: const Icon(Icons.home),
             ),
             IconButton(
               onPressed: () {},
               color: Colors.white,
-              icon: Icon(Icons.videogame_asset),
+              icon: const Icon(Icons.videogame_asset),
             ),
             IconButton(
               onPressed: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => Schedule(day: 1)));
+                    MaterialPageRoute(builder: (context) => const Schedule(day: 1)));
               },
               color: Colors.white,
-              icon: Icon(Icons.calendar_month),
+              icon: const Icon(Icons.calendar_month),
             ),
             IconButton(
               onPressed: () {
                 Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => Team()));
+                    context, MaterialPageRoute(builder: (context) => const Team()));
               },
               color: Colors.white,
-              icon: Icon(Icons.people),
+              icon: const Icon(Icons.people),
             ),
           ],
         ),
