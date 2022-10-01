@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "859313741550",
+    "project_id": "x-uberance--22",
+    "storage_bucket": "x-uberance--22.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:859313741550:android:01ac16f46a5f0840c8ddff",
+        "android_client_info": {
+          "package_name": "com.example.xuberance22_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "859313741550-ir736khp98pbib1trclpmmgldueeod9k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBer0gphAi5pi-m_9XcUic8iAqyrUet1fE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "859313741550-ir736khp98pbib1trclpmmgldueeod9k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
