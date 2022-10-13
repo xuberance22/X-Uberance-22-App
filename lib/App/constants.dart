@@ -762,7 +762,7 @@ maintain a positive outlook towards our fellow competitors. We
 expect all participants to refrain from using unfair means while
 participating in their respective events.
 \n9. Rights to admission are reserved.""",
-    mapLink: 'Event_Location/X-30',floor: 'FIRST FLOOR'),
+    mapLink: 'map_events/X-QUIZITE',floor: 'FIRST FLOOR'),
   Eventss(
       name: "X-CALIBRE",
       about: "DEBATE",
@@ -1224,7 +1224,7 @@ maintain a positive outlook towards our fellow competitors. We
 expect all participants to refrain from using unfair means while
 participating in their respective events.
 \n9. Rights to admission are reserved.""",
-    mapLink: 'Event_Location/X-ABHINOY',floor: 'GROUND FLOOR'),
+    mapLink: 'map_events/Gymnasium',floor: 'GROUND FLOOR'),
   Eventss(
       name: "X-ACT",
       about: "AD-SPOOF",
@@ -1314,7 +1314,7 @@ maintain a positive outlook towards our fellow competitors. We
 expect all participants to refrain from using unfair means while
 participating in their respective events.
 \n9. Rights to admission are reserved.""",
-    mapLink: 'map_events/Primary_Auditorium',floor: 'GROUND FLOOR'),
+    mapLink: 'map_events/Primary_Auditorium',floor: 'FOURTH FLOOR'),
   Eventss(
       name: "X-RHYME",
       about: "SLAM POETRY",
@@ -1450,7 +1450,7 @@ maintain a positive outlook towards our fellow competitors. We
 expect all participants to refrain from using unfair means while
 participating in their respective events.
 \n9. Rights to admission are reserved.""",
-    mapLink: 'map_events/Primary_Gymnasium',floor: 'GROUND FLOOR'),
+    mapLink: 'map_events/Primary_Gymnasium',floor: 'FOURTH FLOOR'),
   Eventss(
       name: "X-TRAVANGANCE",
       about: "WESTERN DANCE",
@@ -1501,7 +1501,7 @@ participating in their respective events.
       name: "X-ACOUSTIC",
       about: "WESTERN MUSIC",
       category: "ON-STAGE",
-      location: "Gymansium",
+      location: "Gymansium (Senior School)",
       day: "2",
       time: "2:00",
       participants: "5+3",
@@ -1542,7 +1542,7 @@ maintain a positive outlook towards our fellow competitors. We
 expect all participants to refrain from using unfair means while
 participating in their respective events.
 \n9. Rights to admission are reserved.""",
-    mapLink: 'Event_Location/X-ACOUSTIC',floor: 'GROUND FLOOR'),
+    mapLink: 'map_events/Gymnasium.png',floor: 'GROUND FLOOR'),
   Eventss(
       name: "X-PUN",
       about: "STAND UP",
